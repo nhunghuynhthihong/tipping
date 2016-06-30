@@ -38,6 +38,7 @@
                                         <connections>
                                             <action selector="calculateAmounts:" destination="BYZ-38-t0r" eventType="valueChanged" id="QcO-4n-bwh"/>
                                             <action selector="calculateAmounts:" destination="BYZ-38-t0r" eventType="editingChanged" id="Yqp-uY-ydt"/>
+                                            <action selector="endInputBillAmount:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mNG-Ea-EOP"/>
                                         </connections>
                                     </textField>
                                 </subviews>

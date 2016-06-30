@@ -11,18 +11,14 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var defaultTipTf: UITextField!
     
+    let alert = UIAlertController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let defaults = NSUserDefaults.standardUserDefaults()
         defaultTipTf.text! =  "\(defaults.integerForKey("DEFAULT_TIP"))"
     }
-    
-    func showAlert (message: String) {
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
-    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,11 +26,11 @@ class SettingsViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         guard let defaultValue = Int(defaultTipTf.text!) else {
-            showAlert("Default tip value has to be an Integer!")
+            alert.showAlert("Default tip value has to be an Integer!", fromController: self)
             return
         }
         if defaultValue < 0 {
-            self.showAlert("Default tip has to be greater or equal 0!")
+            alert.showAlert("Default tip has to be greater or equal 0!", fromController: self)
             return
         }
         

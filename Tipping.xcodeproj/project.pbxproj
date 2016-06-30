@@ -13,6 +13,7 @@
 		6BAE09721D1E286200646414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAE09701D1E286200646414 /* Main.storyboard */; };
 		6BAE09741D1E286200646414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BAE09731D1E286200646414 /* Assets.xcassets */; };
 		6BAE09771D1E286200646414 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAE09751D1E286200646414 /* LaunchScreen.storyboard */; };
+		6BDA4AA11D22DE2000476B9F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDA4AA01D22DE2000476B9F /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		6BAE09731D1E286200646414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BAE09761D1E286200646414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BAE09781D1E286200646414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BDA4AA01D22DE2000476B9F /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				6BAE09751D1E286200646414 /* LaunchScreen.storyboard */,
 				6BAE09781D1E286200646414 /* Info.plist */,
 				6B12C5A31D1E5D7100A0F39E /* SettingsViewController.swift */,
+				6BDA4AA01D22DE2000476B9F /* AlertViewController.swift */,
 			);
 			path = Tipping;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				6BAE096F1D1E286200646414 /* ViewController.swift in Sources */,
 				6BAE096D1D1E286200646414 /* AppDelegate.swift in Sources */,
 				6B12C5A41D1E5D7100A0F39E /* SettingsViewController.swift in Sources */,
+				6BDA4AA11D22DE2000476B9F /* AlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

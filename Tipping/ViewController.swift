@@ -27,6 +27,8 @@ class ViewController: UIViewController {
     var minSplit:Int = 1
     var maxSplit:Int = 10
     
+    let alert = UIAlertController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         split = minSplit
@@ -93,7 +95,19 @@ class ViewController: UIViewController {
         totalAmoutLb.text = String(format: "$%.2f", calTotal)
     }
     
-    @IBAction func clearInfo(sender: AnyObject) {
+    @IBAction func endInputBillAmount(sender: AnyObject) {
+        print("End input")
+        guard let billAmount = Double(billAmountTf.text!) else {
+            alert.showAlert("Bill amount value has to be a number!", fromController: self)
+            return
+        }
+        if billAmount < 0 {
+            alert.showAlert("Bill amount value has to be greater or equal 0!", fromController: self)
+            return
+        }
+    }
+    
+    @IBAction func clearInfo(sen0der: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         tip = defaults.integerForKey("DEFAULT_TIP")
         tipPercentage.text = "\(tip) %"
